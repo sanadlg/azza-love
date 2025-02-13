@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لأنني أحبك، Azza</title>
+  <style>
+    /* تصميم عام */
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* عرض الرسالة */
+    .message {
+      position: relative;
+      z-index: 2;
+      font-size: 24px;
+      font-weight: bold;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    /* رسم القلب */
+    .heart {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      transform: rotate(-45deg);
+      animation: beat 1.5s infinite ease-in-out;
+      z-index: 1;
+    }
+
+    .heart:before,
+    .heart:after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+    .heart:before {
+      top: -50px;
+      left: 0;
+    }
+
+    .heart:after {
+      left: 50px;
+      top: 0;
+    }
+
+    /* تأثير النبض */
+    @keyframes beat {
+      0%, 100% {
+        transform: scale(1) rotate(-45deg);
+      }
+      50% {
+        transform: scale(1.2) rotate(-45deg);
+      }
+    }
+
+    /* ظهور الرسالة تدريجيًا */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- القلب -->
+  <div class="heart"></div>
+
+  <!-- الرسالة -->
+  <div class="message">
+    لأني أحبك،<br><span style="font-size: 36px;">Azza</span><br>كل شيء حولك يجعلني سعيدًا ❤️
+  </div>
+
+  <!-- JavaScript (اختياري) -->
+  <script>
+    // يمكنك إضافة أي تأثيرات إضافية هنا إذا كنت ترغب
+    console.log("مرحباً بك، Azza!");
+  </script>
+</body>
+</html>
